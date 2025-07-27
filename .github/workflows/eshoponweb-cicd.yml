@@ -56,6 +56,9 @@ jobs:
     environment:
       name: 'Development'
     steps:
+
+    - name: Verify Bicep template exists
+      run: ls -l bicep-template/webapp.bicep
     
     #Download the publish files created in previous job
     - name: Download artifact from build job
